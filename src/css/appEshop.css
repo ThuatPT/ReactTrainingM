@@ -1732,3 +1732,6 @@ textarea.input {
 .dropdown .nav-link {
   color: black !important;
 }
+.nav-top-item .nav-link{
+    color:white !important;
+}

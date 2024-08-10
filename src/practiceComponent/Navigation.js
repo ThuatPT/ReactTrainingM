@@ -11,6 +11,11 @@ const categories = [
   "View All",
   "Phones & Accessories",
   "Computer & Office",
+  "Home & Garden",
+  "Sports & Outdoors",
+  "Toys & Games",
+  "Health & Beauty",
+  "Automotive",
 ];
 
 const Navigation = () => (
@@ -64,9 +69,9 @@ const Navigation = () => (
           ))}
         </Nav>
         {/* /Category Navigation */}
-
         {/* Menu Navigation */}
-        <Nav className="menu-nav flex py-2">
+
+        <Nav className="menu-nav flex py-2 nav-top-item">
           <Nav.Item>
             <Nav.Link href="#">Home</Nav.Link>
           </Nav.Item>
