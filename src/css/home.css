@@ -1,0 +1,7 @@
+/* appEshop.css */
+
+/* Đặt chiều cao tối đa cho các hình ảnh trong carousel */
+.banner-img {
+  max-height: 480px;
+  object-fit: cover; /* Đảm bảo ảnh được cắt và không bị biến dạng */
+}
