@@ -73,9 +73,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #30323A;
+  color: #30323A !important;
   -webkit-transition: 0.3s color;
   transition: 0.3s color;
+      text-decoration: none !important;
 }
 
 a:hover, a:focus {
@@ -1734,4 +1735,16 @@ textarea.input {
 }
 .nav-top-item .nav-link{
     color:white !important;
+}
+
+/* product  */
+
+.product-price {
+  display: flex;
+  align-items: center;
+}
+
+.price-rating {
+  margin-left: 10px; /* Điều chỉnh khoảng cách giữa giá tiền và ngôi sao đánh giá */
+  display: flex;
 }

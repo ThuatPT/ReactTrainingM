@@ -1,3 +1,4 @@
+import DealsOfTheDay from "./DealsOfTheDay";
 import FeaturedCategories from "./FeaturedCategories";
 import Header from "./Header";
 import Home from "./Home";
@@ -13,6 +14,7 @@ const AppEshop = () => {
       </div>
 
       <FeaturedCategories />
+      <DealsOfTheDay />
     </div>
   );
 };
