@@ -318,8 +318,7 @@ textarea.input {
 \*----------------------------*/
 
 #top-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
+
   border-bottom: 1px solid #DADADA;
 }
 
@@ -1747,4 +1746,54 @@ textarea.input {
 .price-rating {
   margin-left: 10px; /* Điều chỉnh khoảng cách giữa giá tiền và ngôi sao đánh giá */
   display: flex;
+}
+/* appEshop.css */
+.border-orange {
+  border: 2px solid #F8694A; /* Màu cam cho viền */
+  padding: 10px; /* Khoảng cách giữa viền và nội dung */
+  border-radius: 1px; /* Bo tròn viền nếu cần */
+}
+@media (min-width: 992px) {
+  .first-img {
+    display: block; /* Hoặc display: flex; tùy vào layout */
+    width: 322px;
+    height: 429px;
+  }
+}
+
+/* Đảm bảo rằng các lớp khác không bị ảnh hưởng khi màn hình nhỏ hơn */
+@media (max-width: 991px) {
+  .first-img {
+    display: none; /* Ẩn lớp này trên màn hình nhỏ hơn */
+  }
+}.custom-button {
+  color: #FFF;
+  background-color: #F8694A;
+  border: none; /* Loại bỏ đường viền nếu cần */
+  padding: 10px 20px; /* Thay đổi kích thước của nút nếu cần */
+  font-weight: bold; /* Sử dụng giá trị 'bold' để làm văn bản đậm */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Thay đổi hiệu ứng chuyển màu khi hover */
+}
+
+.custom-button:hover {
+  background-color: #e65c39; /* Màu nền khi hover */
+}
+.input-item {
+  width: 100%; /* Đảm bảo trường nhập chiếm toàn bộ chiều rộng của phần tử chứa */
+  padding: 10px 15px; /* Thêm khoảng cách xung quanh văn bản bên trong trường nhập */
+  border: 1px solid #ddd; /* Đường viền nhẹ xung quanh trường nhập */
+ 
+  font-size: 16px; /* Kích thước chữ */
+  color: #333; /* Màu chữ */
+  background-color: #f9f9f9; /* Màu nền của trường nhập */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ để tạo hiệu ứng nổi */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển tiếp cho border và box-shadow */
+  margin-button:10px !important;
+}
+
+.input-item:focus {
+  border-color: #F8694A; /* Đổi màu đường viền khi trường nhập được chọn */
+  box-shadow: 0 0 4px rgba(248, 105, 74, 0.5); /* Đổ bóng sáng hơn khi trường nhập được chọn */
+  outline: none; /* Loại bỏ viền màu xanh mặc định của trình duyệt khi trường nhập được chọn */
 }

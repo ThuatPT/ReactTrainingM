@@ -13,10 +13,22 @@ import {
 import "../css/appEshop.css";
 
 const DealsOfTheDay = () => {
-  const products = [
+  const product = [
     {
       id: 1,
       imgSrc: require("../assets/images/img/product01.jpg"),
+      price: "$32.50",
+      oldPrice: "$45.00",
+      isNew: false,
+      discount: "-20%",
+      countdown: ["00 H", "00 M", "00 S"],
+      rating: 4.5,
+    },
+  ];
+  const products = [
+    {
+      id: 1,
+      imgSrc: require("../assets/images/img/product02.jpg"),
       price: "$32.50",
       oldPrice: "$45.00",
       isNew: true,
@@ -112,15 +124,67 @@ const DealsOfTheDay = () => {
           </div>
 
           <div className="col-md-3 col-sm-6 col-xs-6">
-            <div className="banner banner-2">
-              <img src={require("../assets/images/img/banner14.jpg")} alt="" />
-              <div className="banner-caption">
-                <h2 className="white-color">
-                  NEW
-                  <br />
-                  COLLECTION
+            <div className="product product-single first-slide border-orange">
+              <div className="product-thumb">
+                <div className="product-label">
+                  {product[0].isNew && <span>New</span>}
+                  {product[0].discount && (
+                    <span className="sale">{product[0].discount}</span>
+                  )}
+                </div>
+                <ul className="product-countdown">
+                  {product[0].countdown.map((time, index) => (
+                    <li key={index}>
+                      <span>{time}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="main-btn quick-view">
+                  <FaSearchPlus /> Quick view
+                </button>
+                <img src={product[0].imgSrc} className="first-img  " alt="" />
+              </div>
+              <div className="product-body">
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <h3 className="product-price mb-0 h5">
+                      {product[0].price}{" "}
+                      <del className="product-old-price text-muted small">
+                        {product[0].oldPrice}
+                      </del>
+                    </h3>
+                  </div>
+                  <div className="price-rating">
+                    {renderStars(product[0].rating)}
+                  </div>
+                </div>
+
+                <h2 className="product-name h6">
+                  <a href="#" className="product_name text-dark">
+                    Product Name Goes Here
+                  </a>
                 </h2>
-                <button className="primary-btn">Shop Now</button>
+
+                <div className="product-btns mt-2 d-flex">
+                  <Button variant="light" className="me-2">
+                    <FaHeart style={{ color: "red" }} />
+                  </Button>
+                  <Button variant="light" className="me-2">
+                    <FaExchangeAlt style={{ color: "grey" }} />
+                  </Button>
+                  <Button
+                    variant="primary"
+                    style={{
+                      backgroundColor: "#F8694A",
+                      borderColor: "#F8694A",
+                    }}
+                  >
+                    <FaShoppingCart
+                      style={{ color: "white", marginRight: "8px" }}
+                    />{" "}
+                    Add to Cart
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -136,13 +200,7 @@ const DealsOfTheDay = () => {
                         <span className="sale">{product.discount}</span>
                       )}
                     </div>
-                    <ul className="product-countdown">
-                      {product.countdown.map((time, index) => (
-                        <li key={index}>
-                          <span>{time}</span>
-                        </li>
-                      ))}
-                    </ul>
+
                     <button className="main-btn quick-view">
                       <FaSearchPlus /> Quick view
                     </button>

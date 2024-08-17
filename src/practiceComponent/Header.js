@@ -15,31 +15,38 @@ import {
   FaSearch,
   FaTrash,
   FaArrowRight,
-} from "react-icons/fa"; // Thêm FaArrowRight vào đây
+} from "react-icons/fa";
 import logo from "../assets/images/logo.png";
+
 const Header = () => {
   return (
     <>
       {/* top Header */}
-      <div id="top-header" className="bg-light py-2">
+      <div id="top-header" className="bg-light ">
         <Container>
-          <Navbar className="justify-content-between">
+          <Navbar expand="lg" className="justify-content-between">
             <span>Welcome to E-shop!</span>
-            <Nav>
-              <Nav.Link href="#">Store</Nav.Link>
-              <Nav.Link href="#">Newsletter</Nav.Link>
-              <Nav.Link href="#">FAQ</Nav.Link>
-              <NavDropdown title="ENG" id="language-dropdown">
-                <NavDropdown.Item href="#">English (ENG)</NavDropdown.Item>
-                <NavDropdown.Item href="#">Russian (Ru)</NavDropdown.Item>
-                <NavDropdown.Item href="#">French (FR)</NavDropdown.Item>
-                <NavDropdown.Item href="#">Spanish (Es)</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="USD" id="currency-dropdown">
-                <NavDropdown.Item href="#">USD ($)</NavDropdown.Item>
-                <NavDropdown.Item href="#">EUR (€)</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+            <Navbar.Toggle aria-controls="top-navbar-nav" />
+            <Navbar.Collapse
+              id="top-navbar-nav"
+              className="justify-content-end"
+            >
+              <Nav className="ml-auto">
+                <Nav.Link href="#">Store</Nav.Link>
+                <Nav.Link href="#">Newsletter</Nav.Link>
+                <Nav.Link href="#">FAQ</Nav.Link>
+                <NavDropdown title="ENG" id="language-dropdown">
+                  <NavDropdown.Item href="#">English (ENG)</NavDropdown.Item>
+                  <NavDropdown.Item href="#">Russian (Ru)</NavDropdown.Item>
+                  <NavDropdown.Item href="#">French (FR)</NavDropdown.Item>
+                  <NavDropdown.Item href="#">Spanish (Es)</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="USD" id="currency-dropdown">
+                  <NavDropdown.Item href="#">USD ($)</NavDropdown.Item>
+                  <NavDropdown.Item href="#">EUR (€)</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
           </Navbar>
         </Container>
       </div>
@@ -48,31 +55,26 @@ const Header = () => {
       {/* header */}
       <div id="header" className="py-3 bg-white shadow-sm">
         <Container>
-          <Navbar className="justify-content-between">
+          <Navbar expand="lg" className="justify-content-between">
             {/* Logo */}
             <Navbar.Brand href="#">
-              <img
-                // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS17I_nNotTG9CiWE-EmwQNz0dJOSL_mgsyHQ&s"
-                src={logo}
-                alt="Logo"
-                height="80"
-              />
+              <img src={logo} alt="Logo" height="80" />
             </Navbar.Brand>
             {/* /Logo */}
 
             {/* Search */}
             <Form inline className="d-flex">
               <InputGroup>
+                <Form.Select aria-label="Category select">
+                  <option value={0}>All Categories</option>
+                  <option value={1}>Category 01</option>
+                  <option value={2}>Category 02</option>
+                </Form.Select>
                 <Form.Control
                   type="text"
                   placeholder="Enter your keyword"
                   className="mr-sm-2"
                 />
-                <Form.Select>
-                  <option value={0}>All Categories</option>
-                  <option value={1}>Category 01</option>
-                  <option value={2}>Category 02</option>
-                </Form.Select>
                 <Button variant="outline-primary">
                   <FaSearch />
                 </Button>
@@ -80,7 +82,7 @@ const Header = () => {
             </Form>
             {/* /Search */}
 
-            <Nav>
+            <Nav className="ml-auto">
               {/* Account */}
               <Dropdown as={Nav.Item} className="mr-3">
                 <Dropdown.Toggle as={Nav.Link}>
@@ -108,7 +110,7 @@ const Header = () => {
                   className="p-4 bg-white shadow-lg rounded-lg"
                 >
                   <div id="shopping-cart">
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="d-flex align-items-center justify-content-between mb-3">
                       <img
                         src="./img/thumb-product01.jpg"
                         alt=""
@@ -131,11 +133,11 @@ const Header = () => {
                         <FaTrash />
                       </Button>
                     </div>
-                    <div className="flex justify-between mt-4">
-                      <Button variant="outline-primary" className="w-full mr-2">
+                    <div className="d-flex justify-content-between mt-4">
+                      <Button variant="outline-primary" className="w-100 mr-2">
                         View Cart
                       </Button>
-                      <Button variant="primary" className="w-full">
+                      <Button variant="primary" className="w-100">
                         Checkout <FaArrowRight className="ml-2" />
                       </Button>
                     </div>

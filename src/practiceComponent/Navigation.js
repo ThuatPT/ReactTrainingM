@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, NavDropdown, Container, Row, Col, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css"; // Đảm bảo rằng bạn đã import bootstrap CSS
+import { FaList } from "react-icons/fa"; // Import icon từ react-icons
 import "../css/appEshop.css";
 const categories = [
   "Women’s Clothing",
@@ -25,8 +26,12 @@ const Navigation = () => (
         {/* Category Navigation */}
         <Nav className="category-nav flex-column">
           <Nav.Item>
-            <Nav.Link href="#" className="category-header">
-              Categories <i className="fa fa-list" />
+            <Nav.Link
+              href="#"
+              className="category-header d-flex justify-content-between align-items-center text-white"
+            >
+              <span>Categories</span> {/* Căn chữ sang trái */}
+              <FaList /> {/* Căn icon sang phải */}
             </Nav.Link>
           </Nav.Item>
           {categories.map((category, index) => (

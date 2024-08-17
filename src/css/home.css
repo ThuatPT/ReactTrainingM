@@ -5,3 +5,53 @@
   max-height: 480px;
   object-fit: cover; /* Đảm bảo ảnh được cắt và không bị biến dạng */
 }
+/* home.css */
+
+/* Đảm bảo container banner có chiều cao đầy đủ */
+.carousel-item {
+  position: relative;
+  height: 63vh; /* Chiều cao bằng chiều cao của viewport */
+}
+
+/* Căn giữa nội dung bên trong Carousel.Caption */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Màu chữ mặc định là trắng để dễ đọc trên ảnh tối */
+}
+
+/* Nếu muốn căn chỉnh cho cụ thể các kiểu */
+.carousel-caption h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-caption .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Các lớp màu cho các phần tử */
+.white-color {
+  color: #fff;
+}
+
+.primary-color {
+  color: #007bff; /* Màu chính của Bootstrap, có thể thay đổi nếu cần */
+}
+
+.font-weak {
+  font-weight: 300; /* Điều chỉnh độ dày của chữ */
+}
+
+.banner-img {
+  /* Các kiểu cho ảnh banner nếu cần */
+}
