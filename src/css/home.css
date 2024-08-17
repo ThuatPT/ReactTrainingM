@@ -19,7 +19,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+
   color: #fff; /* Màu chữ mặc định là trắng để dễ đọc trên ảnh tối */
 }
 
@@ -44,9 +44,12 @@
   color: #fff;
 }
 
-.primary-color {
-  color: #007bff; /* Màu chính của Bootstrap, có thể thay đổi nếu cần */
+.primary-color-deal {
+    color: #30323A !important;
+  font-weight:700;
+
 }
+
 
 .font-weak {
   font-weight: 300; /* Điều chỉnh độ dày của chữ */
@@ -55,3 +58,11 @@
 .banner-img {
   /* Các kiểu cho ảnh banner nếu cần */
 }
+.primary-color {
+  color: #F8694A;
+  font-weight:700;
+}
+.Collection-item{
+  font-weight:700;
+}
+

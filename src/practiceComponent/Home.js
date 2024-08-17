@@ -19,9 +19,9 @@ const Home = () => (
               alt="First slide"
             />
             <Carousel.Caption className="text-center">
-              <h1>Bags Sale</h1>
+              <h1 className="primary-color-deal">BAGS SALE</h1>
               <h3 className="white-color font-weak">Up to 50% Discount</h3>
-              <Button variant="primary">Shop Now</Button>
+              <button className="primary-btn">Shop Now</button>
             </Carousel.Caption>
           </Carousel.Item>
           {/* /banner */}
@@ -38,7 +38,7 @@ const Home = () => (
                 <br />
                 <span className="white-color font-weak">Up to 50% OFF</span>
               </h1>
-              <Button variant="primary">Shop Now</Button>
+              <button className="primary-btn">Shop Now</button>
             </Carousel.Caption>
           </Carousel.Item>
           {/* /banner */}
@@ -49,11 +49,11 @@ const Home = () => (
               src={require("../assets/images/img/banner03.jpg")}
               alt="Third slide"
             />
-            <Carousel.Caption className="text-center">
-              <h1 className="white-color">
-                New Product <span>Collection</span>
+            <Carousel.Caption className="">
+              <h1 className="white-color Collection-item">
+                NEW PRODUCT <span>COLLECTION</span>
               </h1>
-              <Button variant="primary">Shop Now</Button>
+              <button className="primary-btn">Shop Now</button>
             </Carousel.Caption>
           </Carousel.Item>
           {/* /banner */}

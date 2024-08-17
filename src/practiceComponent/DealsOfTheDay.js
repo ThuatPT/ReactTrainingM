@@ -75,7 +75,7 @@ const DealsOfTheDay = () => {
 
   // Cấu hình slider
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3, // Hiển thị 3 sản phẩm

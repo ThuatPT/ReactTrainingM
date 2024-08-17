@@ -24,7 +24,7 @@ const Navigation = () => (
     <Container>
       <div id="responsive-nav">
         {/* Category Navigation */}
-        <Nav className="category-nav flex-column">
+        <Nav className="category-nav flex-column border rounded mb-4">
           <Nav.Item>
             <Nav.Link
               href="#"
@@ -38,6 +38,7 @@ const Navigation = () => (
             <NavDropdown
               key={index}
               title={category}
+              className="border-bottom"
               id={`category-dropdown-${index}`}
             >
               <div className="custom-menu">

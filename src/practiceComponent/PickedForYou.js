@@ -14,7 +14,7 @@ const PickedForYou = () => {
     // Các sản phẩm mẫu cho hàng đầu tiên
     {
       id: 1,
-      imgSrc: require("../assets/images/img/product01.jpg"),
+      imgSrc: require("../assets/images/img/product04.jpg"),
       price: "$32.50",
       oldPrice: "$45.00",
       isNew: false,
@@ -44,7 +44,7 @@ const PickedForYou = () => {
     },
     {
       id: 4,
-      imgSrc: require("../assets/images/img/product04.jpg"),
+      imgSrc: require("../assets/images/img/product01.jpg"),
       price: "$22.00",
       oldPrice: "$30.00",
       isNew: false,

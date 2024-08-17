@@ -8,6 +8,7 @@ import {
   Button,
   NavDropdown,
   InputGroup,
+  Image,
 } from "react-bootstrap";
 import {
   FaUserCircle,
@@ -16,6 +17,7 @@ import {
   FaTrash,
   FaArrowRight,
 } from "react-icons/fa";
+import "../css/header.css";
 import logo from "../assets/images/logo.png";
 
 const Header = () => {
@@ -105,39 +107,41 @@ const Header = () => {
                   <FaShoppingCart />
                   <span className="badge badge-danger">3</span> My Cart: $35.20
                 </Dropdown.Toggle>
-                <Dropdown.Menu
-                  align="end"
-                  className="p-4 bg-white shadow-lg rounded-lg"
-                >
+                <Dropdown.Menu align="end" className="shopping-cart-menu">
                   <div id="shopping-cart">
-                    <div className="d-flex align-items-center justify-content-between mb-3">
+                    {/* Product Item */}
+                    <div className="cart-item">
                       <img
-                        src="./img/thumb-product01.jpg"
+                        src={require("../assets/images/img/product07.jpg")}
                         alt=""
-                        className="w-12 h-12 object-cover rounded-md"
+                        className="cart-item-image"
                       />
-                      <div className="flex-1 ml-3">
-                        <h3 className="text-lg font-semibold text-gray-800">
-                          $32.50{" "}
-                          <span className="text-sm font-normal text-gray-600">
-                            x3
-                          </span>
-                        </h3>
-                        <h5 className="text-sm font-medium text-gray-600">
-                          <a href="#" className="text-blue-500 hover:underline">
-                            Product Name Goes Here
-                          </a>
+                      <div className="cart-item-details">
+                        <h5 className="cart-item-price">
+                          $32.50 <span className="cart-item-quantity">x3</span>
                         </h5>
+                        <a href="#" className="cart-item-name">
+                          Product Name Goes Here
+                        </a>
                       </div>
-                      <Button variant="danger" size="sm" className="p-2">
+                      <Button
+                        variant="danger"
+                        size="sm"
+                        className="cart-item-remove-btn"
+                      >
                         <FaTrash />
                       </Button>
                     </div>
-                    <div className="d-flex justify-content-between mt-4">
-                      <Button variant="outline-primary" className="w-100 mr-2">
+
+                    {/* Buttons */}
+                    <div className="cart-actions">
+                      <Button
+                        variant="outline-primary"
+                        className="cart-view-btn"
+                      >
                         View Cart
                       </Button>
-                      <Button variant="primary" className="w-100">
+                      <Button variant="primary" className="cart-checkout-btn">
                         Checkout <FaArrowRight className="ml-2" />
                       </Button>
                     </div>

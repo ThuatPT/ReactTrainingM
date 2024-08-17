@@ -1,15 +1,11 @@
 import React from "react";
-import "../css/appEshop.css"; // Đảm bảo rằng bạn đã nhập CSS ở đây
-
+import "../css/appEshop.css";
 function CollectionCard() {
   return (
     <div>
       <div className="section section-grey">
-        {/* container */}
         <div className="container">
-          {/* row */}
           <div className="row">
-            {/* banner lớn */}
             <div className="col-md-8">
               <div className="banner banner-1">
                 <img
@@ -26,9 +22,6 @@ function CollectionCard() {
                 </div>
               </div>
             </div>
-            {/* /banner lớn */}
-
-            {/* cột chứa hai banner nhỏ */}
             <div className="col-md-4 d-flex flex-column">
               <a className="banner banner-1 mb-2" href="#">
                 <img
@@ -49,11 +42,8 @@ function CollectionCard() {
                 </div>
               </a>
             </div>
-            {/* /cột chứa hai banner nhỏ */}
           </div>
-          {/* /row */}
         </div>
-        {/* /container */}
       </div>
     </div>
   );
