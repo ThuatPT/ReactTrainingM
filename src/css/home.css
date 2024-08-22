@@ -19,7 +19,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   color: #fff; /* Màu chữ mặc định là trắng để dễ đọc trên ảnh tối */
 }
 
