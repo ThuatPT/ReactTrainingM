@@ -54,7 +54,6 @@ const DealsOfTheDay = () => {
       rating: 2.5,
     },
   ];
-
   // Hàm để hiển thị ngôi sao dựa trên điểm đánh giá
   const renderStars = (rating) => {
     const fullStars = Math.floor(rating);

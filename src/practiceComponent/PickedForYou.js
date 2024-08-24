@@ -11,7 +11,6 @@ import "../css/appEshop.css";
 
 const PickedForYou = () => {
   const products = [
-    // Các sản phẩm mẫu cho hàng đầu tiên
     {
       id: 1,
       imgSrc: require("../assets/images/img/product04.jpg"),
@@ -188,8 +187,6 @@ const PickedForYou = () => {
               ))}
             </div>
           </div>
-
-          {/* Hàng thứ hai với sản phẩm đặc biệt và 3 sản phẩm bình thường còn lại */}
         </div>
       </div>
     </div>

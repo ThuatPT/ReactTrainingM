@@ -12,7 +12,6 @@ function ParentComponent() {
   useEffect(() => {
     console.log("🚀 ~ ParentComponent ~ colorClass:", colorClass);
   }, [colorClass]);
-  console.log("🚀 ~ ParentComponent ~ colorClass:", colorClass);
 
   return (
     <>
