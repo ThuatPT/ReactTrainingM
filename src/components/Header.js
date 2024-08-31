@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa";
 import "../css/header.css";
 import logo from "../assets/images/logo.png";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 const Header = () => {
   return (
@@ -48,6 +49,7 @@ const Header = () => {
                   <NavDropdown.Item href="#">EUR (€)</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
+              <ToggleDarkMode /> {/* Nút chuyển đổi chế độ */}
             </Navbar.Collapse>
           </Navbar>
         </Container>
