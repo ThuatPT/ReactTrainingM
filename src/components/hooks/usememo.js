@@ -19,7 +19,7 @@ function FibonacciComponent() {
   // Sử dụng useMemo để ghi nhớ (memoize) kết quả của hàm fibonacci
   const fibValue = useMemo(() => {
     console.log(`useMemo được gọi cho number = ${number}`);
-    return fibCache(number);
+    return fibCache(number); 
   }, [number, fibCache]);
 
   return (
